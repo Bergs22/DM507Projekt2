@@ -12,7 +12,7 @@ package dm507projekt2;
 public class DictBinTree implements Dict {
 
     public DictBinTree() {
-       
+       DictBinTree dict = new DictBinTree();
     }
 
     @Override
