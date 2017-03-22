@@ -11,8 +11,10 @@ package dm507projekt2;
  */
 public class DictBinTree implements Dict {
 
+    private Node root = null;
+    
     public DictBinTree() {
-       DictBinTree dict = new DictBinTree();
+       this.root = root;
     }
 
     @Override
