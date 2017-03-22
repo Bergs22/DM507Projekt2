@@ -23,6 +23,9 @@ public class Node {
         this.key = key;
     }
 
+    public Node() {
+    }
+
     public Node(int key) {
         this.key = key;
     }
