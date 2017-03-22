@@ -17,12 +17,10 @@ public class DictBinTree implements Dict {
        this.root = root;
     }
 
-
     @Override
     public void insert(int key) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
 
     @Override
     public int[] orderedTraversal() {
