@@ -6,21 +6,36 @@
 package dm507projekt2;
 
 /**
- *
  * @author Mads
  */
 public class DictBinTree implements Dict {
 
     private Node root = null;
-    
+
     public DictBinTree() {
-       this.root = root;
     }
 
 
     @Override
     public void insert(int key) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Node newNode = new Node(key);
+        Node y = null;
+        Node x = root;
+        while (x != null) {
+            y = x;
+            if (newNode.getKey() < x.getKey()) {
+                x.setLeftChild(x);
+            } else {
+                x.setRightChild(x);
+            }
+        }
+        if (y == null) {
+            root = newNode;
+        } else if (newNode.getKey() < y.getKey()) {
+            y.setLeftChild(newNode);
+        } else {
+            y.setRightChild(newNode);
+        }
     }
 
 
@@ -33,5 +48,5 @@ public class DictBinTree implements Dict {
     public boolean search(int key) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }
