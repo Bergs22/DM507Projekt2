@@ -30,7 +30,7 @@ public class DictBinTree implements Dict {
     }
 
     @Override
-    public boolean search() {
+    public boolean search(int key) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
