@@ -11,6 +11,7 @@ package dm507projekt2;
 public class DictBinTree implements Dict {
 
     private Node root = null;
+    private int size = 0;
 
     public DictBinTree() {
     }
@@ -18,6 +19,7 @@ public class DictBinTree implements Dict {
 
     @Override
     public void insert(int key) {
+        size++;
         Node newNode = new Node(key);
         Node y = null;
         Node x = root;
@@ -25,8 +27,10 @@ public class DictBinTree implements Dict {
             y = x;
             if (newNode.getKey() < x.getKey()) {
                 x.setLeftChild(x);
+
             } else {
                 x.setRightChild(x);
+
             }
         }
         if (y == null) {
