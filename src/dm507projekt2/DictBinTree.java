@@ -5,8 +5,6 @@
  */
 package dm507projekt2;
 
-import java.util.ArrayList;
-
 /**
  * @author Mads
  */
@@ -49,6 +47,7 @@ public class DictBinTree implements Dict {
     @Override
     public int[] orderedTraversal() {
         int[] nodes = new int[size];
+        counter = 0;
         return  inorderTreeWalk(root, nodes);
     }
 
