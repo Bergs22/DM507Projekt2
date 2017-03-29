@@ -26,10 +26,10 @@ public class DictBinTree implements Dict {
         while (x != null) {
             y = x;
             if (newNode.getKey() < x.getKey()) {
-                x.setLeftChild(x);
+                x = x.getLeftChild();
 
             } else {
-                x.setRightChild(x);
+                x = x.getRightChild();
 
             }
         }
@@ -50,7 +50,8 @@ public class DictBinTree implements Dict {
 
     @Override
     public boolean search(int key) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        boolean b = false;
+        return b;
     }
 
 }
