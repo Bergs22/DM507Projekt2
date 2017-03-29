@@ -16,7 +16,6 @@ public class DictBinTree implements Dict {
     public DictBinTree() {
     }
 
-
     @Override
     public void insert(int key) {
         size++;
@@ -41,7 +40,6 @@ public class DictBinTree implements Dict {
             y.setRightChild(newNode);
         }
     }
-
 
     @Override
     public int[] orderedTraversal() {
