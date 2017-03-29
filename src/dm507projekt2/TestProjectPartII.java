@@ -27,40 +27,40 @@ public class TestProjectPartII {
             if (d.search(searchValues[i])) {answer = "PRESENT";} else {answer = "ABSENT";}
             System.out.println(" - searching for value " + searchValues[i] + " reported " + answer);
         }
-//
-//        System.out.println();
-//        System.out.println("Calling orderedTraversal");
-//        int[] list = d.orderedTraversal();
-//        System.out.println("Output is:");
-//        for (int i=0; i<list.length; i++) {
-//            System.out.print(" " + list[i]);
-//        }
-//        System.out.println();
-//
-//        System.out.println();
-//        System.out.println("Now testing empty tree");
-//
-//        System.out.println();
-//        System.out.println("Creating a DictBinTree");
-//        d = new DictBinTree();
-//
-//        System.out.println();
-//        System.out.println("Testing search()");
-//        for (int i=0; i<searchValues.length; i++) {
-//            System.out.print("Searching for " + searchValues[i]);
-//            if (d.search(searchValues[i])) {answer = "PRESENT";} else {answer = "ABSENT";}
-//            System.out.println(" - searching for value " + searchValues[i] + " reported " + answer);
-//        }
-//
-//        System.out.println();
-//        System.out.println("Calling orderedTraversal");
-//        list = d.orderedTraversal();
-//        System.out.println("Output is:");
-//        for (int i=0; i<list.length; i++) {
-//            System.out.print(" " + list[i]);
-//        }
-//
-//        System.out.println();
+
+        System.out.println();
+        System.out.println("Calling orderedTraversal");
+        int[] list = d.orderedTraversal();
+        System.out.println("Output is:");
+        for (int i=0; i<list.length; i++) {
+            System.out.print(" " + list[i]);
+        }
+        System.out.println();
+
+        System.out.println();
+        System.out.println("Now testing empty tree");
+
+        System.out.println();
+        System.out.println("Creating a DictBinTree");
+        d = new DictBinTree();
+
+        System.out.println();
+        System.out.println("Testing search()");
+        for (int i=0; i<searchValues.length; i++) {
+            System.out.print("Searching for " + searchValues[i]);
+            if (d.search(searchValues[i])) {answer = "PRESENT";} else {answer = "ABSENT";}
+            System.out.println(" - searching for value " + searchValues[i] + " reported " + answer);
+        }
+
+        System.out.println();
+        System.out.println("Calling orderedTraversal");
+        list = d.orderedTraversal();
+        System.out.println("Output is:");
+        for (int i=0; i<list.length; i++) {
+            System.out.print(" " + list[i]);
+        }
+
+        System.out.println();
 
     }
 }

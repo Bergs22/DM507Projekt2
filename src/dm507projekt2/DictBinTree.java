@@ -5,6 +5,8 @@
  */
 package dm507projekt2;
 
+import java.util.ArrayList;
+
 /**
  * @author Mads
  */
@@ -12,6 +14,8 @@ public class DictBinTree implements Dict {
 
     private Node root;
     private int size = 0;
+    private int counter = 0;
+
 
     public DictBinTree() {
         root = null;
@@ -44,13 +48,42 @@ public class DictBinTree implements Dict {
 
     @Override
     public int[] orderedTraversal() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int[] nodes = new int[size];
+        return  inorderTreeWalk(root, nodes);
+    }
+
+    private int[] inorderTreeWalk(Node x, int[] a) {
+
+        if(x != null){
+            inorderTreeWalk(x.getLeftChild(), a);
+            a[counter] = x.getKey();
+            counter++;
+            inorderTreeWalk(x.getRightChild(), a);
+        }
+        return a;
     }
 
     @Override
     public boolean search(int key) {
-        boolean b = false;
-        return b;
+    if (treeSearch(root, key) == null){
+        return false;
+    } else {
+        return true;
+    }
+    }
+
+    private Node treeSearch(Node x, int key) {
+
+        if (x == null || key == x.getKey()) {
+            return x;
+        }
+        if (key < x.getKey()) {
+
+            return treeSearch(x.getLeftChild(), key);
+        } else {
+            return treeSearch(x.getRightChild(), key);
+
+        }
     }
 
 }
