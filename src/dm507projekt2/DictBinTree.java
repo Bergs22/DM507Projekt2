@@ -24,6 +24,7 @@ public class DictBinTree implements Dict {
             y = x;
             if (newNode.getKey() < x.getKey()) {
                 x.setLeftChild(x);
+                
             } else {
                 x.setRightChild(x);
             }
